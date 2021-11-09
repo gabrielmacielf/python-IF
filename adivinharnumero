@@ -1,0 +1,7 @@
+from random import randint
+computador = randint(0, 5)
+n = int(input('Tente adivinhar o número de 0 a 5: '))
+if n == computador:
+    print('Pensei no número {}, você acertou!'.format(computador))
+else:
+    print('Pensei no número {}, você errou!'.format(computador))
