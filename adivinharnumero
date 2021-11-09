@@ -1,6 +1,9 @@
 from random import randint
+from time import sleep
 computador = randint(0, 5)
 n = int(input('Tente adivinhar o número de 0 a 5: '))
+print('Processando...')
+sleep(3)
 if n == computador:
     print('Pensei no número {}, você acertou!'.format(computador))
 else:
