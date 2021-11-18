@@ -1,0 +1,19 @@
+valor = float(input('Qual o preço do produto? R$'))
+print('Condição de Pagamento')
+print('[1] - À vista \n[2] - À vista no cartão \n[3] - 2x no cartão \n[4] - 3x ou mais vezes no cartão')
+cond = int(input('Digite a condição de pagamento: '))
+if cond == 1:
+    print('Condição escolhida: À vista. Você ganhou 10% de desconto.')
+    print('Valor da compra R${:.2f}, com desconto: R${:.2f}'.format(valor, (valor-(valor*0.1))))
+elif cond == 2:
+    print('Condição escolhida: À vista no cartão. Você ganhou 5% de desconto.')
+    print('Valor da compra R${:.2f}, com desconto: R${:.2f}'.format(valor, (valor-(valor*0.05))))
+elif cond == 3:
+    print('Condição escolhida: 2x no cartão, sem juros. Parcelas de {:.2f}'.format(valor/2))
+    print('Valor da compra R${:.2f}'.format(valor))
+elif cond == 4:
+    parcela = int(input('Quantas parcelas? 3x ou mais '))
+    print('Condição escolhida: {}x no cartão. 20% de juros'.format(parcela))
+    print('Valor da compra R${:.2f}, {} parcelas de {:.2f} com 20% de juros: R${:.2f}'.format(valor, parcela, ((valor+(valor*0.2))/parcela), (valor+(valor*0.2))))
+else:
+    print('Opção inválida de pagamento. Tente novamente.')
